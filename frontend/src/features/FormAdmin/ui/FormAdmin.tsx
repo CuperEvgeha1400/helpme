@@ -13,7 +13,9 @@ import { FormType, statusT } from "shared/models/types/FormType";
 import {Link, useNavigate} from 'react-router-dom'
 import { usesortForms } from "shared/lib/usesortForms";
 import { FormApi } from "shared/api/FormApi";
+import Cookies from "js-cookie";
 export const FormAdmin: React.FC = () => {
+    let accessToken = Cookies.get("access_token")
     const [forms, setForms] = useState<FormType[] | null>(null);
     const [type , setType] = useState<statusT>(statusT.TREATMENT)
     const sortForms = usesortForms(forms, type)
@@ -27,7 +29,11 @@ export const FormAdmin: React.FC = () => {
     useEffect(()=> {
       load()
     },[])
-  
+
+        useEffect(()=> {
+      load()
+    },[accessToken])
+
     return(<>
       <TableContainer>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">

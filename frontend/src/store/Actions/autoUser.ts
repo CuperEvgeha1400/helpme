@@ -10,7 +10,7 @@ export const AuthUser = (User : User) => {
     return async (dispatch : TypeDispatch) => {
         try {
             dispatch(user.actions.pendUser());
-            const response = await axios.post('http://localhost:8000/api/login/',User)
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/login/`,User)
             Cookies.set('access_token', response.data.token)
             dispatch(user.actions.AuthUser(response.data))
             return true

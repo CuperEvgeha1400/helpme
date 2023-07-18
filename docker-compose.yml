@@ -20,19 +20,6 @@ services:
     networks:
       - pgdb
 
-  pgadmin:
-    container_name: pgadmin4
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    ports:
-      - 5050:85
-    depends_on:
-      - postgres_db
-    networks:
-      - pgdb
-
   backend:
     container_name: backend
     build:
@@ -56,7 +43,9 @@ services:
     build:
       context: frontend/
     ports:
-      - 80:3000
+      - 80:80
+    environment:
+      - REACT_APP_API_URL=http://solopharma.shop:8000
     depends_on:
       - backend
     restart:

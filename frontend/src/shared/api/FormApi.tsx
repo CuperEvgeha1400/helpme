@@ -4,8 +4,11 @@ import Cookies from 'js-cookie';
 export class FormApi {
     constructor(){
         this.token =  Cookies.get('access_token');
+          this.instance2 = axios.create({
+            baseURL: `${process.env.REACT_APP_API_URL}`,
+        })
         this.instance = axios.create({
-            baseURL: 'http://localhost:8000',
+            baseURL: `${process.env.REACT_APP_API_URL}`,
             headers: {
                 'Authorization': `Token ${this.token}`
             }
@@ -14,7 +17,7 @@ export class FormApi {
     async addForm (form :FormType){
         
         try {
-          await  axios.post(`http://localhost:8000/form/api/post/`, form)
+          await  this.instance2.post(`${process.env.REACT_APP_API_URL}/form/api/post/`, form)
           alert("Děkujeme za odeslání přihlášky!")
         } catch (error) {
             alert("Nevyplnili jste všechna pole nebo taková žádost již existuje!")
@@ -24,7 +27,9 @@ export class FormApi {
 
     async getForm(){
         try {
-          const response =   await this.instance.get('http://localhost:8000/form/api/form/');
+          const response =   await axios.get(`${process.env.REACT_APP_API_URL}/form/api/form/`, {
+                  headers: {
+                'Authorization': `Token ${this.token}`}});
           return response
         } catch (error) {
             
@@ -41,4 +46,5 @@ export class FormApi {
 
     token
     instance
+    instance2
 }

@@ -2,8 +2,8 @@ import { FormType, statusT } from 'shared/models/types/FormType';
 import {FormApi} from '../api/FormApi'
 const API = new FormApi();
 
-export const ClickAdd = (form : FormType ) =>{
-   API.addForm(form)
+export const ClickAdd = async (form : FormType ) =>{
+   await API.addForm(form)
 }
 
 

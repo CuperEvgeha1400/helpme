@@ -15,6 +15,7 @@ if(accessToken)
 { 
  store.dispatch(reAuthUser())
 }
+
 root.render(
     <>
     <Provider store={store}>

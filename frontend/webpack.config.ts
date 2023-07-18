@@ -14,7 +14,7 @@ export default  (env : EnvBuild)=> {
      src : path.resolve(__dirname, 'src')
    }
    const server : DevServer = {
-      port : env.port || 3000,
+      port : env.port || 80,
       directory : paths.devserver
    }
    const isDev = mode === 'development'
