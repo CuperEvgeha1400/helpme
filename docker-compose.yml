@@ -56,7 +56,7 @@ services:
     build:
       context: frontend/
     ports:
-      - 85:85
+      - 80:3000
     depends_on:
       - backend
     restart:

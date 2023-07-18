@@ -1,0 +1,1 @@
+export {AsyncAutoPage as AutoPage} from './ui/AsyncAutoPage'

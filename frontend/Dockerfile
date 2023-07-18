@@ -4,7 +4,7 @@ RUN mkdir -p /app
 WORKDIR /app
 ADD . /app
 
-#RUN npm install
-#RUN npm run build:prod
+RUN npm install
+RUN npm run build:prod
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "start"]

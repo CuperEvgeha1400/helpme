@@ -1,0 +1,1 @@
+export {Kontakt} from './ui/Kontak'

@@ -1,0 +1,1 @@
+export {NewsInner} from './ui/NewsInner'
