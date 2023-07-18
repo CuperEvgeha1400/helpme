@@ -12,7 +12,6 @@ export const AuthUser = (User : User) => {
             dispatch(user.actions.pendUser());
             const response = await axios.post('http://localhost:8000/api/login/',User)
             Cookies.set('access_token', response.data.token)
-            console.log(Cookies.get('access_token'))
             dispatch(user.actions.AuthUser(response.data))
             return true
         } catch (error) {

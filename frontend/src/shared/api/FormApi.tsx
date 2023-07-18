@@ -14,7 +14,6 @@ export class FormApi {
     async addForm (form :FormType){
         
         try {
-            console.log(form)
           await  axios.post(`http://localhost:8000/form/api/post/`, form)
           alert("Děkujeme za odeslání přihlášky!")
         } catch (error) {
@@ -24,7 +23,6 @@ export class FormApi {
     }
 
     async getForm(){
-        console.log(this.token)
         try {
           const response =   await this.instance.get('http://localhost:8000/form/api/form/');
           return response

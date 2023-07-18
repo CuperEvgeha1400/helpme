@@ -27,7 +27,6 @@ export const FormAdmin: React.FC = () => {
     useEffect(()=> {
       load()
     },[])
-    console.log(forms)
   
     return(<>
       <TableContainer>

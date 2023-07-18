@@ -7,8 +7,8 @@ function devServerBuild(options : DevServer) : Configuration{
             publicPath  : directory
         },
         port : port,
-        historyApiFallback: true
-        
+        historyApiFallback: true,
+        allowedHosts: "all"
     }
 }
 export default devServerBuild
