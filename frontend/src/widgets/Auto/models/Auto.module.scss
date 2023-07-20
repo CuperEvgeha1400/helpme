@@ -1,0 +1,64 @@
+.background_container{
+    background-image: url('../models//img/objed.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+}
+
+.container {
+    display:  flex;
+    justify-content: center;
+    align-items: center ;
+
+   
+    height: 100vh;
+
+
+    
+}
+
+
+.inner_auto {
+    max-width: 700px;
+    width: 100%;
+    padding: 50px;
+    border-radius: 20px;
+
+    background-color: white;
+}
+
+
+.inner_auto input  {
+    padding: 10px;
+
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+.btn_head{
+    padding:  15px 40px;
+
+    background-color: #333333;
+    
+    color : white;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+
+    text-decoration: none;
+
+    margin-top: 20px;
+
+
+}
+
+
+.btn_container{
+    display: flex;
+    justify-content: space-between;
+}

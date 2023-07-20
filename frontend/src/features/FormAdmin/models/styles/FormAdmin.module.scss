@@ -1,0 +1,22 @@
+.container_flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+  
+}
+
+.container_flex .k{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.container_edit{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px;
+}

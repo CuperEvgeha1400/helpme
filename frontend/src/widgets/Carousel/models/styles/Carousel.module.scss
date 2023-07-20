@@ -1,0 +1,45 @@
+.container{
+    max-width: 1190px;
+    
+    
+    padding: 0 40px ;
+    margin: 0 auto; 
+    padding-top: 120px;
+
+}
+
+.Carousel_container {
+
+
+
+    
+
+    background-color: #333333;
+    border-radius: 30px;
+
+ 
+}
+
+.Carousel_container h1 {
+    color : #FFCC00;
+    padding: 80px 0 0 30px;
+ 
+}
+.inner_container{
+    position: relative;
+    padding: 40px 100px 180px 100px;
+}
+
+@media (max-width : 900px) {
+    .inner_container{
+       
+        padding: 40px 20px 180px 20px;
+    }
+
+    .container {
+        padding: 0;
+    }
+}
+
+
+

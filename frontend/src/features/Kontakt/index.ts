@@ -1,0 +1,1 @@
+export {KontaktInner} from './ui/KontaktInner'

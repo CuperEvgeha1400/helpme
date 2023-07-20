@@ -1,0 +1,199 @@
+.inner_container_carousel{
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+
+     background-image: url('../img/back.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+
+.intro_carousel{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.intro_carousel h2{
+   position: relative;
+   margin-left: 10px;
+}
+
+.intro_carousel img{
+     max-width: 30px;
+     max-height: 30px;
+  }
+
+
+  .intro_carousel h2::after{
+     content: url('../img/after.png');
+     position: absolute;
+     top: 20px;
+     left: -75px;
+  }
+
+.inner_content{
+ display: flex;
+ padding: 40px 40px 0 40px;
+ align-items: end;
+ justify-content: center;
+}
+
+.child_inner1 {
+     position: relative;
+
+     background-color: #333333;
+     color : white;
+
+     padding: 40px;
+     margin: 0 10px;
+
+     border-radius: 20px 20px 0 0;
+     
+
+
+}
+
+.child_inner2 {
+     position: relative;
+
+     background-color: #26475a;
+     color : white;
+     
+     padding: 40px;
+     margin: 0 10px;
+
+     border-radius: 20px 20px 0 0;
+
+}
+
+.child_inner3 {
+     position: relative;
+
+     background-color: #ffcc00;
+     color : white;
+     
+     padding: 40px;
+     margin: 0 10px;
+
+     border-radius: 20px 20px 0 0;
+}
+
+
+.child_inner1 h2{
+     color : white
+    
+
+}
+
+.child_inner2 h2{
+     color : white
+}
+
+.child_inner3 h2{
+     color : white
+}
+
+
+
+
+
+.child_inner1 img{
+    
+
+    position: absolute;
+
+    max-width: 20px;
+    max-height: 20px;
+
+    top: 20px;
+    left: 20px;
+    
+
+}
+
+.child_inner2 img{
+ 
+
+     position: absolute;
+
+     max-width: 20px;
+     max-height: 20px;
+
+     top: 20px;
+     left: 20px;
+    
+
+}
+
+.child_inner3 img{
+     position: absolute;
+
+     max-width: 20px;
+     max-height: 20px;
+
+     top: 20px;
+     left: 20px;
+    
+
+}
+
+
+@media(max-width :900px) {
+     .inner_content{
+          flex-direction: column;
+          padding: 40px 10px 0 10px;
+           
+         }
+
+         .child_inner1 {
+       
+          margin: 10px 0;
+     
+         
+          
+     
+     
+     }
+     
+     .child_inner2 {
+       
+          margin: 10px 0;
+     
+        
+     
+     }
+     
+     .child_inner3 {
+       
+          margin: 10px 0;
+     
+      
+     }
+
+     .child_inner1 div{
+      font-size: 9px;
+    
+
+     }
+     
+     .child_inner2 div{
+          font-size: 9px;
+     }
+     
+     .child_inner3 div{
+          font-size: 9px;
+     }
+
+     .intro_carousel h2::after{
+          display: none;
+       }
+
+
+     .intro_img{
+          display: none !important;
+       }
+}
+
+

@@ -1,0 +1,1 @@
+export {FooterInner} from './ui/FooterInner'
